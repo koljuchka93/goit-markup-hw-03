@@ -1,6 +1,6 @@
 :root {
-  --main-font: 'Roboto', sans-serif;
-  --secondary-font: 'Raleway', sans-serif;
+  --main-font: "Roboto", sans-serif;
+  --secondary-font: "Raleway", sans-serif;
   --main-bcgrnd-color: #ffffff;
   --font-heading-color: #212121;
   --font-paragraph-color: #757575;
@@ -9,12 +9,43 @@
   --btn-click-on-color: #188ce8;
   --btn-portfolio-color: #f5f4fa;
 }
+/* BASE RESET */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+img {
+  display: block;
+}
 .list {
   list-style: none;
 }
 .link {
   text-decoration: none;
   color: var(--main-bcgrnd-color);
+}
+.section {
+  padding-top: 130px;
+  padding-bottom: 94px;
+}
+/* DIV Class = CONTAINER center content */
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
 }
 /* BODY */
 body {
@@ -23,10 +54,31 @@ body {
   color: var(--font-heading-color);
   font-size: 14px;
   letter-spacing: 0.03em;
+  margin: 0 auto;
 }
 /* HEADER */
+.header {
+  padding-top: 24px;
+  padding-bottom: 25px;
+  background-color: var(--main-bcgrnd-color);
+  border: 1px solid #ececec;
+}
+.header-container {
+  display: flex;
+  justify-content: space-between;
+}
+.menu-nav {
+  display: flex;
+  align-items: center;
+}
+.menu {
+  display: flex;
+}
+.menu-item:not(:last-child) {
+  margin-right: 50px;
+}
 .menu-link {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -37,12 +89,17 @@ body {
   color: var(--font—btn-accent-color);
 }
 /* font-family: 'Raleway', sans-serif; */
+.contact-list {
+  display: flex;
+  align-items: center;
+}
 .mail-link {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--font-paragraph-color);
+  margin-right: 50px;
 }
 .mail-link:hover,
 .mail-link:focus {
@@ -53,7 +110,7 @@ body {
   color: var(--font—btn-accent-color);
 }
 .tel-link {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -64,18 +121,20 @@ body {
   color: var(--font—btn-accent-color);
 }
 .logo-header {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
   /* identical to box height */
   color: var(--font-heading-color);
+  margin-right: 93px;
 }
+/* END HEADER */
 
 /* MAIN CONTENT */
 /* SECTION ONE - HERO */
 .hero-text {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -88,12 +147,13 @@ body {
 }
 /* MODAL BUTTON */
 .modal-btn {
-  font-family: 'Roboto', sans-serif;
+  min-width: 200px;
+  height: 50px;
+  border-radius: 4px;
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.875;
-  /* identical to box height, or 187% */
-  display: flex;
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
@@ -111,7 +171,7 @@ body {
 }
 /* PORTFOLIO BUTTON */
 .btn-list-item-prtf {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.625;
@@ -135,14 +195,15 @@ body {
 
 /* SECTION TWO - OUR WORK */
 .our-work-list-item-h3 {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
+  font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
   color: var(--font-heading-color);
 }
 .our-work-list-item-p {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   line-height: 1.714;
   /* or 171% */
@@ -150,7 +211,7 @@ body {
 }
 /* OUR WORK IMAGES */
 .our-work-team-h2 {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.67;
@@ -162,7 +223,7 @@ body {
 
 /* SECTION TWO - IMAGES GALLERY */
 .img-gallery-item-h3 {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -171,7 +232,7 @@ body {
   color: var(--font-heading-color);
 }
 .img-gallery-item-p {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.875;
@@ -182,7 +243,7 @@ body {
 
 /* SECTION THREE - TEAM */
 .team-list-item-h3 {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.188;
@@ -191,7 +252,7 @@ body {
   color: var(--font-heading-color);
 }
 .team-list-item-p {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.88;
@@ -206,7 +267,7 @@ body {
   background-color: var(--main-and-footer-bcgrnd-color);
 }
 .footer-logo {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 26px;
